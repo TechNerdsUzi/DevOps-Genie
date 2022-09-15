@@ -1,0 +1,13 @@
+$fontWeights: 400 "Regular", 500 "Medium", 600 "SemiBold", 700 "Bold";
+
+@each $weight, $weightName in $fontWeights {
+    @font-face {
+        font-family: "Be Vietnam Pro";
+        src: url("../fonts/be-vietnam-pro/BeVietnamPro-#{$weightName}.eot");
+        src: url("../fonts/be-vietnam-pro/BeVietnamPro-#{$weightName}.eot?#iefix") format('embedded-opentype'),
+             url("../fonts/be-vietnam-pro/BeVietnamPro-#{$weightName}.woff2") format('woff2'),
+             url("../fonts/be-vietnam-pro/BeVietnamPro-#{$weightName}.woff") format('woff'),
+             url("../fonts/be-vietnam-pro/BeVietnamPro-#{$weightName}.ttf") format('truetype');
+        font-weight: $weight;
+    }
+}
